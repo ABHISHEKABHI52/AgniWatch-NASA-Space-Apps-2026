@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0f14" />
+    <title>AgniWatch | Satellite Fire Intelligence</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand"><span class="brand-mark">⌘</span><span><strong>AgniWatch</strong><small>Satellite fire intelligence</small></span></div>
+        <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="side-nav" aria-label="Primary navigation">
+          <p class="nav-label">Monitor</p>
+          <a href="#dashboard" data-route="dashboard"><span>◈</span><b>Dashboard</b></a>
+          <a href="#livefire" data-route="livefire"><span>⌖</span><b>Live fire map</b></a>
+          <a href="#historical" data-route="historical"><span>◷</span><b>Historical activity</b></a>
+          <p class="nav-label">Understand</p>
+          <a href="#sensorcomparison" data-route="sensorcomparison"><span>◉</span><b>Sensor comparison</b></a>
+          <a href="#analytics" data-route="analytics"><span>▥</span><b>Analytics</b></a>
+          <a href="#datasources" data-route="datasources"><span>◌</span><b>Data sources</b></a>
+          <a href="#methodology" data-route="methodology"><span>◇</span><b>Methodology</b></a>
+          <p class="nav-label">Workspace</p>
+          <a href="#settings" data-route="settings"><span>⚙</span><b>Settings</b></a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="status-line"><i></i><span>Data services ready</span></div>
+          <a class="profile" href="#settings"><span class="avatar">DA</span><span><strong>Demo Analyst</strong><small>Analyst · simulated auth</small></span></a>
+          <button class="logout-link" id="logout">Sign out</button>
+        </div>
+      </aside>
+
+      <div class="main-shell">
+        <header class="topbar">
+          <div class="mobile-brand"><span class="brand-mark">⌘</span><strong>AgniWatch</strong></div>
+          <div class="breadcrumb"><span id="page-kicker">Overview</span><strong id="page-title">Fire intelligence dashboard</strong></div>
+          <div class="top-actions">
+            <span class="data-status" id="data-status"><i></i><b>PUBLIC DEMO</b><small>Curated NASA sample</small></span>
+            <button class="icon-button" id="refresh" title="Refresh data">↻</button>
+            <a class="avatar" href="#settings" aria-label="Open settings">DA</a>
+          </div>
+        </header>
+        <main id="app"></main>
+        <footer class="app-footer"><span>AGNIWATCH / ORBIT X</span><span>Harmonization of MODIS and VIIRS hot spots</span><span>Prototype · No NASA endorsement claimed</span></footer>
+      </div>
+    </div>
+    <div id="notice" class="notice" role="status" aria-live="polite"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="config.js"></script>
+    <script src="public-demo.js"></script>
+    <script src="api.js?v=20261110"></script>
+    <script src="app.js?v=20261110"></script>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+python -m unittest discover -s tests 2>&1 | Out-File -FilePath "C:\Users\abhis\AgniWatch\backend\test_out.txt" -Encoding UTF8
+Get-Content "C:\Users\abhis\AgniWatch\backend\test_out.txt" | Select-Object -Last 25

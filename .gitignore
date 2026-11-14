@@ -1,0 +1,35 @@
+# Secrets and local configuration
+**/.env
+**/.env.*
+!**/.env.example
+**/login.json
+
+# Local Python environments and caches
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+*.py[cod]
+
+# NASA source archives and local indexes
+Data/
+**/data/*.sqlite
+**/data/*.sqlite3
+**/data/*.sqlite3-*
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.db-wal
+*.db-shm
+
+# Runtime logs and generated test output
+*.log
+**/test_out.txt
+**/unittest_results.txt
+
+# Local tooling
+.vercel/
+.DS_Store
+Thumbs.db
